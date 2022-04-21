@@ -1,0 +1,9 @@
+<mat-progress-spinner mode="indeterminate"  *ngIf="!ipcList"
+></mat-progress-spinner>
+<canvas class="chart" *ngIf="ipcList"
+baseChart
+[data]="salesData"
+[type]="'line'"
+[options]="chartOptions"
+>
+

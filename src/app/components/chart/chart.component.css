@@ -1,0 +1,8 @@
+.chart{
+    padding-bottom: 100px;
+}
+mat-progress-spinner{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px); 
+}
