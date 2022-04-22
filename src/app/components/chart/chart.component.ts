@@ -48,15 +48,15 @@ export class ChartComponent implements OnInit {
     }
   };
 
-  constructor(consumerService:ConsumerService) {
-    consumerService.get(environment.urlApi).subscribe((ipcs:IIPC[])=>{
-      this.ipcList = ipcs;
-      this.generateTable()
-    });
+  constructor(private consumerService:ConsumerService) {
+   
    }
 
   ngOnInit(): void {
-   
+    this.consumerService.get(environment.urlApi).subscribe((ipcs:IIPC[])=>{
+      this.ipcList = ipcs;
+      this.generateTable()
+    });
   }
   generateTable(){
 this.salesData =  {
